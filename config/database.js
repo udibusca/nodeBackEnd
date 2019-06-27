@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports =  new Sequelize('pds2', 'root', '', {
+let sequelize = new Sequelize('pds2', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
   operatorsAliases: false,
@@ -10,3 +10,5 @@ module.exports =  new Sequelize('pds2', 'root', '', {
     idle: 10000
   },
 });
+sequelize.sync();
+module.exports = sequelize;
