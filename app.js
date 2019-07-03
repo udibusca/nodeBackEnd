@@ -21,8 +21,12 @@ app.set("json spaces",4);
 
 const index = require('./routes/index');
 const clientes = require('./routes/clientes');
+const categorias = require('./routes/categoria');
+const editoras = require('./routes/editora');
 
 app.use('/', index);
 app.use('/clientes', clientes);
+app.use('/categorias', categorias);
+app.use('/editora', editoras);
 
 app.listen(PORT, () => console.log("escutando na porta "+PORT));
